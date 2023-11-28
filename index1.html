@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Elastic Constant Predictor Web App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class = "container">
+	
+        <div class = "banner">
+	    <div class = "web-text">
+		
+		<h1>Hardness, Bulk & Sheer Moduli Predictor</h1>
+    		<p>By using a random forest model, we can predict the bulk modulus, sheer modulus,<br> and mechanical hardness of a 			   compound,given only its chemical formula as input. <br> Our model was trained with data from the Materials Project 			   database, including over <br> 10,500 target compounds and 121 features based on stoichiometric attributes, <br> 			   elemental properties, and electron orbital occupations</p>
+	
+
+	    <div class = "form">
+		
+		<form action="/predict">
+                Enter compound formula (such as C2O4, etc.) <input type='text' name='compound formula'>
+                <input type='submit' value='Continue'>
+                </form>
+        	
+		<br>
+         	Predicted Bulk Modulus (GPa): {0} <br>
+        	Predicted Sheer Modulus (GPa): {1} <br>
+         	Predicted Hardness (GPa): {2} <br>
+	  
+	    </div>
+         
+	</div>
+   </div>
+</body>
+</html>
