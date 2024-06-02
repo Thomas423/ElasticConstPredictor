@@ -67,17 +67,17 @@
 }
 
 .container{
-	width: 100vw;
-	height: 100vh;
-	background: #49474B;
+    width: 100vw;
+    height: 100vh;
+    background: #49474B;
     overflow-x: hidden;
 }
 
 .banner{
-	width: 100%;
+    width: 100%;
     height: 90%;
     padding: 5%;
-	color: white;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
