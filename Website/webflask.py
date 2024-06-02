@@ -3,15 +3,11 @@ from flask import Flask, request, render_template
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-#from keras.saving import load_model
 import pickle
-#import matminer
-#import sys
-#import re
 
 from matminer.featurizers.conversions import StrToComposition
 from matminer.featurizers.composition import Meredig
-#from sklearn.preprocessing import StandardScaler
+
 
 
 
@@ -70,8 +66,8 @@ def predict():
 
 @app.route('/predict2')
 def predict2():
-    bulk_model = tf.keras.models.load_model('/home/th2302/mysite/Bulk_model.keras')
-    shear_model = tf.keras.models.load_model('/home/th2302/mysite/Shear_model.keras')
+    bulk_model = tf.keras.models.load_model('/home/th2302/Website/Bulk_model.keras')
+    shear_model = tf.keras.models.load_model('/home/th2302/Website/Shear_model.keras')
 
     compound_name = request.args.get('compound formula', '')
     if compound_name.isspace == True:
